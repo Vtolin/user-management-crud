@@ -1,17 +1,27 @@
 User Management CRUD
 A basic CRUD (Create, Read, Update, Delete) project built with Node.js and MySQL, designed to manage users in a MySQL database.
 
+
 Prerequisites
 Before starting, make sure you have the following installed:
 
 Node.js (v14 or newer recommended)
+
 MySQL (Workbench or CLI)
+
 Features
+
 Create: Add new users to the database.
+
 Read: Retrieve user data.
+
 Update: Edit existing user information.
+
 Delete: Remove users from the database.
+
+
 Getting Started
+
 Follow these steps to set up and run the application.
 
 Step 1: Clone the Repository
@@ -32,10 +42,10 @@ npm init -y
 
 npm install express mysql2 body-parser
 
+
 Step 3: Set Up the MySQL Database
 
 Create a new database in MySQL (e.g., using MySQL Workbench or CLI).
-
 
 Import the provided SQL schema or run the necessary SQL commands to create the required tables. Example:
 
@@ -51,6 +61,7 @@ CREATE TABLE users (
     age INT NOT NULL
 );
 
+
 Update the database connection details in your project files, usually located in config.js or within the app.js file:
 
 const db = mysql.createConnection({
@@ -61,6 +72,7 @@ const db = mysql.createConnection({
     database: 'user_management'
     
 });
+
 
 Step 4: Run the Application
 Start the server with the following command:
@@ -84,6 +96,7 @@ POST /users - Add a new user.
 PUT /users/:id - Update an existing user by ID.
 
 DELETE /users/:id - Delete a user by ID.
+
 
 Notes
 Ensure that your MySQL service is running before starting the app.
