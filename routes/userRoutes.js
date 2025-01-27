@@ -50,7 +50,6 @@ router.put('/users/:id', (req, res) => {
     });
 });
 
-// Delete a user
 router.delete('/users/:id', (req, res) => {
     const { id } = req.params;
     const query = `DELETE FROM users WHERE id = ?`;
