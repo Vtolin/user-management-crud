@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const db = require('../database');
 
-// Create a new user
 router.post('/users', (req, res) => {
     const { name, email } = req.body;
     const query = `INSERT INTO users (name, email) VALUES (?, ?)`;
@@ -15,7 +14,6 @@ router.post('/users', (req, res) => {
     });
 });
 
-// Get all users
 router.get('/users', (req, res) => {
     const query = `SELECT * FROM users`;
     db.query(query, (err, results) => {
@@ -27,7 +25,6 @@ router.get('/users', (req, res) => {
     });
 });
 
-// Get a single user
 router.get('/users/:id', (req, res) => {
     const { id } = req.params;
     const query = `SELECT * FROM users WHERE id = ?`;
@@ -40,7 +37,6 @@ router.get('/users/:id', (req, res) => {
     });
 });
 
-// Update a user
 router.put('/users/:id', (req, res) => {
     const { id } = req.params;
     const { name, email } = req.body;
