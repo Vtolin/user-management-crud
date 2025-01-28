@@ -9,16 +9,6 @@ Node.js (v14 or newer recommended)
 
 MySQL (Workbench or CLI)
 
-Features
-
-Create: Add new users to the database.
-
-Read: Retrieve user data.
-
-Update: Edit existing user information.
-
-Delete: Remove users from the database.
-
 
 Getting Started
 
