@@ -4,9 +4,7 @@ A basic CRUD (Create, Read, Update, Delete) project built with Node.js and MySQL
 
 Prerequisites
 Before starting, make sure you have the following installed:
-
 Node.js (v14 or newer recommended)
-
 MySQL (Workbench or CLI)
 
 
