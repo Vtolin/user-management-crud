@@ -24,14 +24,14 @@ cd user-management-crud
 Or manually download and extract the files.
 
 2️⃣ Install Dependencies
-```
+```sh
 npm init -y
 npm install express mysql2 body-parser
 ```
 3️⃣ Set Up MySQL Database
 
 Create a new database in MySQL (Workbench/CLI):
-```
+```sh
 CREATE DATABASE user_management;
 USE user_management;
 
@@ -43,7 +43,7 @@ CREATE TABLE users (
 );
 ```
 Update database connection details in config.js:
-```
+```sh
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'your_username',
@@ -52,11 +52,11 @@ const db = mysql.createConnection({
 });
 ```
 4️⃣ Run the Server
-```
+```sh
 node app.js
 ```
 Expected Output:
-```
+```sh
 Connected to the MySQL database.
 Server is running on http://localhost:3000
 ```
