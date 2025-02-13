@@ -61,7 +61,8 @@ Connected to the MySQL database.
 Server is running on http://localhost:3000
 ```
 🛠️ API Endpoints
-- Use Postman or a browser to test:
+
+Use Postman or a browser to test:
 - GET /users → Retrieve all users
 - POST /users → Add a new user
 - PUT /users/:id → Update a user
