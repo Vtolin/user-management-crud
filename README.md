@@ -1,4 +1,4 @@
-User Management CRUD
+#User Management CRUD
 A basic CRUD (Create, Read, Update, Delete) project built with Node.js and MySQL, designed to manage users in a MySQL database.
 
 
