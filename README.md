@@ -70,10 +70,10 @@ Server is running on http://localhost:3000
 
 📜 Notes
 
-Ensure MySQL service is running before starting the app.
-Use .env files for sensitive credentials.
-This project is for educational purposes but can be extended.
+- Ensure MySQL service is running before starting the app.
+- Use .env files for sensitive credentials.
+- This project is for educational purposes but can be extended.
 
 
 📄 License
-This project is licensed under the MIT License.
+- This project is licensed under the MIT License.
