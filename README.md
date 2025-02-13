@@ -27,11 +27,10 @@ Otherwise, create a folder and add the project files manually.
 Step 2: Install Node.js Modules
 
 Initialize the project and install the required dependencies:
-
+```sh
 npm init -y
-
 npm install express mysql2 body-parser
-
+```
 
 Step 3: Set Up the MySQL Database
 
