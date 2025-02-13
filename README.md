@@ -37,30 +37,32 @@ Step 3: Set Up the MySQL Database
 Create a new database in MySQL (e.g., using MySQL Workbench or CLI).
 
 Import the provided SQL schema or run the necessary SQL commands to create the required tables. Example:
-
+```
 CREATE DATABASE user_management;
-
 USE user_management;
+```
 
+```
 CREATE TABLE users (
-
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     age INT NOT NULL
 );
+```
 
 
 Update the database connection details in your project files, usually located in config.js or within the app.js file:
 
+```
 const db = mysql.createConnection({
-
     host: 'localhost',
     user: 'your_username',
     password: 'your_password',
     database: 'user_management'
     
 });
+```
 
 
 Step 4: Run the Application
