@@ -33,10 +33,8 @@ npm install express mysql2 body-parser
 ```
 
 Step 3: Set Up the MySQL Database
-
-Create a new database in MySQL (e.g., using MySQL Workbench or CLI).
-
-Import the provided SQL schema or run the necessary SQL commands to create the required tables. Example:
+- Create a new database in MySQL (e.g., using MySQL Workbench or CLI).
+- Import the provided SQL schema or run the necessary SQL commands to create the required tables. Example:
 ```
 CREATE DATABASE user_management;
 USE user_management;
