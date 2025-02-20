@@ -1,212 +1,139 @@
-* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
-        }
+.container {
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
 
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
 
-        /* Header styles */
-        .header {
-            margin-bottom: 2rem;
-        }
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
 
-        .header h1 {
-            font-size: 2rem;
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-        }
+th {
+    background-color: #007bff;
+    color: white;
+}
 
-        .header p {
-            color: #666;
-        }
+td.actions {
+    white-space: nowrap;
+}
 
-        /* Card styles */
-        .card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
-            overflow: hidden;
-        }
+.btnSbmt{
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 30px;
+    width: 100px;
+    font-size: 1rem;
+    cursor: pointer;
+}
 
-        .card-header {
-            padding: 1.5rem;
-            border-bottom: 1px solid #eee;
-        }
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    width: 500px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+    height: 30px;
+    font-size: 1rem;
+}
 
-        .card-header h2 {
-            font-size: 1.25rem;
-            color: #2c3e50;
-        }
+.btn-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
+}
 
-        .card-body {
-            padding: 1.5rem;
-        }
+.btn-edit {
+    color: #007bff;
+}
 
-        /* Form styles */
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
-        }
+.btn-delete {
+    color: #dc3545;
+}
 
-        @media (min-width: 768px) {
-            .form-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
+.btn-save {
+    color: #28a745;
+}
 
-        .form-group {
-            margin-bottom: 1rem;
-        }
+.btn-cancel {
+    color: #dc3545;
+}
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 0.875rem;
-            color: #4a5568;
-        }
+.notification {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    animation: fadeOut 3s forwards;
+}
 
-        .form-control {
-            width: 100%;
-            padding: 0.5rem;
-            font-size: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            transition: border-color 0.2s;
-        }
+.notification.error {
+    background: #dc3545;
+}
 
-        .form-control:focus {
-            outline: none;
-            border-color: #3182ce;
-            box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
-        }
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
 
-        /* Button styles */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.5rem 1rem;
-            font-size: 0.875rem;
-            font-weight: 500;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.2s;
-            border: none;
+@media (min-width: 800px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="date"] {
+        width: 700px;
+        height: 30px
         }
+}
 
-        .btn-primary {
-            background-color: #3182ce;
-            color: white;
-        }
+@media (max-width: 768px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="date"] {
+        width: 320px;
+    }
+}
 
-        .btn-primary:hover {
-            background-color: #2c5282;
-        }
+@media (max-width: 480px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="date"] {
+        width: 230px;
+        height: 25px;
+        font-size: 0.9rem;
+    }
+}
 
-        .btn-icon {
-            padding: 0.5rem;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .btn-edit {
-            color: #3182ce;
-        }
-
-        .btn-delete {
-            color: #e53e3e;
-        }
-
-        .btn-save {
-            color: #38a169;
-        }
-
-        .btn-cancel {
-            color: #718096;
-        }
-
-        /* Table styles */
-        .table-container {
-            overflow-x: auto;
-        }
-
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .table th {
-            background-color: #f7fafc;
-            padding: 0.75rem;
-            text-align: left;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #4a5568;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            border-bottom: 1px solid #edf2f7;
-        }
-
-        .table td {
-            padding: 0.75rem;
-            font-size: 0.875rem;
-            border-bottom: 1px solid #edf2f7;
-        }
-
-        .table tr:hover {
-            background-color: #f7fafc;
-        }
-
-        /* Notification styles */
-        .notification {
-            position: fixed;
-            top: 1rem;
-            right: 1rem;
-            padding: 1rem;
-            border-radius: 4px;
-            color: white;
-            animation: slideIn 0.3s ease-out;
-        }
-
-        .notification-success {
-            background-color: #38a169;
-        }
-
-        .notification-error {
-            background-color: #e53e3e;
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        .text-right {
-            text-align: right;
-        }
-
-        .mb-4 {
-            margin-bottom: 1rem;
-        }
+@media (max-width: 400px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="date"] {
+        width: 170px;
+        height: 20px;
+        font-size: 0.8rem;
+    }
+}
