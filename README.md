@@ -39,6 +39,7 @@ CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL UNIQUE,
+  date_value DATE NOT NULL
 );
 ```
 Update database connection details in config.js:
