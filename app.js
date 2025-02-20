@@ -1,16 +1,20 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const userRoutes = require('./routes/userRoutes');
-const path = require('path');
+const express = require('express')
+const bodyParser = require('body-parser')
+const userRoutes = require('./routes/userRoutes')
+const path = require('path')
 
-const app = express();
-const PORT = 3000;
+const app = express()
+const port = 3000
 
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')))
+app.use("/api", userRoutes)
+app.get('/', (req, res) => {
+    res.json({ message: 'User routes working' });
+})
 
-app.use('/api', userRoutes);
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+})
 
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+module.exports = app
