@@ -1,60 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>User Management Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>User Management Dashboard</h1>
+        <div class="head">
+            <h1 style="text-align: center;">Input</h1>
+        </div>
+        <div class="content">
+            <form id="user">
+                <div class="formGroup">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="input" placeholder="Name">                    
+                </div>
+                <div class="formGroup">
+                    <label for="email" >Email</label>
+                    <input type="email" name="email" class="email" placeholder="Email">
+                </div>
+                <div class="formGroup">
+                    <label for="date">Date</label>
+                    <input type="date" name="date" class="date" placeholder="Date">
+                </div>
+                <div class="submit">
+                    <button type="submit" class="btnSbmt">Submit</button>
+                </div>
+            </form>
+        </div>
+        <h1 style="text-align: center;">users</h2>
+        <div class="tables">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="table">
+                    
+                </tbody>
+            </table>
         </div>
 
-        <div class="card">
-            <div class="card-header">
-                <h2>Add New User</h2>
-            </div>
-            <div class="card-body">
-                <form id="addUserForm">
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="Enter name" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control" placeholder="Enter email" required />
-                        </div>
-                    </div>
-                    <div class="text-right">
-                        <button type="submit" class="btn btn-primary">Add User</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-header">
-                <h2>Users</h2>
-            </div>
-            <div class="table-container">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="userTable"></tbody>
-                </table>
-            </div>
-        </div>
     </div>
+</body>
     <script src="script.js">
     </script>
-</body>
 </html>
